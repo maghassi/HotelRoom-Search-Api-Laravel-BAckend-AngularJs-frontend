@@ -17,7 +17,7 @@ class CreateTableRoomCalendar extends Migration
             $table->increments('id');
             $table->integer('room_type_id');
             $table->integer('availability');
-            $table->integer('raservations');
+            $table->integer('reservations');
             $table->float('rate');
             $table->date('day');
             $table->date('created_at');
