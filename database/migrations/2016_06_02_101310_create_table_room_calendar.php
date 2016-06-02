@@ -12,7 +12,18 @@ class CreateTableRoomCalendar extends Migration
      */
     public function up()
     {
-        //
+         Schema::create('room_calendars', function ($table)
+        {
+            $table->increments('id');
+            $table->integer('room_type_id');
+            $table->integer('availability');
+            $table->integer('raservations');
+            $table->float('rate');
+            $table->date('day');
+            $table->date('created_at');
+            $table->date('updated_at');
+
+        });
     }
 
     /**
@@ -22,6 +33,6 @@ class CreateTableRoomCalendar extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('room_calendars');
     }
 }
